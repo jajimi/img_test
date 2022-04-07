@@ -1,0 +1,11 @@
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/solana_streamer-ede25d7ee4254f5d.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/packet.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/quic.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/recvmmsg.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/sendmmsg.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/socket.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/streamer.rs
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/solana_streamer-ede25d7ee4254f5d.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/packet.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/quic.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/recvmmsg.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/sendmmsg.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/socket.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/streamer.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/packet.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/quic.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/recvmmsg.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/sendmmsg.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/socket.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-streamer-1.10.5/src/streamer.rs:

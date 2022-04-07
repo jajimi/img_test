@@ -1,0 +1,12 @@
+/home/jose/Documentos/Solana/img_test/target/debug/deps/getrandom-353c7adce5b552cd.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util_libc.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/use_file.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/linux_android.rs
+
+/home/jose/Documentos/Solana/img_test/target/debug/deps/libgetrandom-353c7adce5b552cd.rlib: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util_libc.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/use_file.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/linux_android.rs
+
+/home/jose/Documentos/Solana/img_test/target/debug/deps/getrandom-353c7adce5b552cd.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util_libc.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/use_file.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/linux_android.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/error.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/util_libc.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/use_file.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/getrandom-0.2.6/src/linux_android.rs:

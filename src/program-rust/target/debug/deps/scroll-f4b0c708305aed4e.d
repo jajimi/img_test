@@ -1,0 +1,14 @@
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/scroll-f4b0c708305aed4e.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/ctx.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/pread.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/pwrite.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/greater.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/endian.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/leb128.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/lesser.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/../README.md
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/scroll-f4b0c708305aed4e.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/ctx.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/pread.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/pwrite.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/greater.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/endian.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/leb128.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/lesser.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/../README.md
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/ctx.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/pread.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/pwrite.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/greater.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/error.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/endian.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/leb128.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/lesser.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/scroll-0.10.2/src/../README.md:

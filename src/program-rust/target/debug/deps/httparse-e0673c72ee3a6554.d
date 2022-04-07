@@ -1,0 +1,10 @@
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/httparse-e0673c72ee3a6554.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/sse42.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/avx2.rs
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/httparse-e0673c72ee3a6554.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/sse42.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/avx2.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/iter.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/macros.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/sse42.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/httparse-1.6.0/src/simd/avx2.rs:

@@ -1,0 +1,10 @@
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/bpfel-unknown-unknown/release/deps/solana_frozen_abi-67d7a8d2105ed47e.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_digester.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_example.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/hash.rs
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/bpfel-unknown-unknown/release/deps/libsolana_frozen_abi-67d7a8d2105ed47e.rlib: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_digester.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_example.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/hash.rs
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/bpfel-unknown-unknown/release/deps/solana_frozen_abi-67d7a8d2105ed47e.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_digester.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_example.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/hash.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_digester.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/abi_example.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/solana-frozen-abi-1.10.5/src/hash.rs:

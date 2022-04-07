@@ -1,0 +1,15 @@
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/anyhow-8d0bec6ab1071dc3.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/backtrace.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/chain.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/context.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/ensure.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/fmt.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/kind.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/macros.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/ptr.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/wrapper.rs
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/anyhow-8d0bec6ab1071dc3.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/backtrace.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/chain.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/context.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/ensure.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/fmt.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/kind.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/macros.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/ptr.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/wrapper.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/backtrace.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/chain.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/context.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/ensure.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/error.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/fmt.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/kind.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/macros.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/ptr.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/anyhow-1.0.56/src/wrapper.rs:

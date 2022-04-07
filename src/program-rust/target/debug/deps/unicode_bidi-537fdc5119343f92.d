@@ -1,0 +1,13 @@
+/home/jose/Documentos/Solana/img_test/target/debug/deps/unicode_bidi-537fdc5119343f92.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/deprecated.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/format_chars.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/level.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/char_data/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/char_data/tables.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/explicit.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/implicit.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/prepare.rs
+
+/home/jose/Documentos/Solana/img_test/target/debug/deps/unicode_bidi-537fdc5119343f92.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/deprecated.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/format_chars.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/level.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/char_data/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/char_data/tables.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/explicit.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/implicit.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/prepare.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/deprecated.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/format_chars.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/level.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/char_data/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/char_data/tables.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/explicit.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/implicit.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/unicode-bidi-0.3.7/src/prepare.rs:

@@ -1,0 +1,15 @@
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/yasna-6250a7b3991e9b87.rmeta: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/tags/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/oid.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/time.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/der.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/writer/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/reader/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/reader/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/deserializer/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/serializer/mod.rs
+
+/home/jose/Documentos/Solana/img_test/src/program-rust/target/debug/deps/yasna-6250a7b3991e9b87.d: /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/lib.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/tags/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/oid.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/time.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/der.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/writer/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/reader/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/reader/error.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/deserializer/mod.rs /home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/serializer/mod.rs
+
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/lib.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/tags/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/oid.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/time.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/models/der.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/writer/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/reader/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/reader/error.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/deserializer/mod.rs:
+/home/jose/.cargo/registry/src/github.com-1ecc6299db9ec823/yasna-0.5.0/src/serializer/mod.rs:
