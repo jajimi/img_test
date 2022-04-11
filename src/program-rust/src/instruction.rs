@@ -12,7 +12,7 @@ pub enum ImgOperation {
         diff: u8,
         encrypted: u8,
         public: u8,
-        editable: u8
+        editable: u8,
     },
 }
 

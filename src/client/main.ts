@@ -27,7 +27,7 @@ async function main() {
   await uploadImage();
 
   // Find out how many times that account has been greeted
-  //await reportImgData();
+  await reportImgData();
   //
   //await chi();
 

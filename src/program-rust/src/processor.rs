@@ -1,24 +1,23 @@
-use borsh::{BorshDeserialize, BorshSerialize};
+//use borsh::{BorshDeserialize, BorshSerialize};
 use solana_program::{
     account_info::{next_account_info, AccountInfo},
     entrypoint::ProgramResult,
     program_error::ProgramError,
     msg,
     pubkey::Pubkey,
-    program_pack::{Pack, Sealed},
-    sysvar::{rent::Rent, Sysvar},
-    program::invoke
+    program_pack::{IsInitialized, Pack, Sealed},
+//    sysvar::{rent::Rent, Sysvar},
+//    program::invoke
 };
-
-use std::{cell::Ref, borrow::BorrowMut};
 
 use crate::instruction::ImgOperation;
 
 use arrayref::{array_mut_ref, array_ref, array_refs, mut_array_refs};
 
 
-#[derive(BorshSerialize, BorshDeserialize, Debug)]
+//#[derive(BorshSerialize, BorshDeserialize, Debug)]
 pub struct ImgData{
+    pub is_initialized:bool,
     pub owner: String,
     pub cid: String,
     pub parent: String,
@@ -31,27 +30,40 @@ pub struct ImgData{
 
 impl Sealed for ImgData {}
 
+impl IsInitialized for ImgData {
+    fn is_initialized(&self) -> bool {
+        self.is_initialized
+    }
+}
+
 impl Pack for ImgData {
-    const LEN: usize = 179;
+    const LEN: usize = 180;
     fn unpack_from_slice(src: &[u8]) -> Result<Self, ProgramError> {
         let src = array_ref![src, 0, ImgData::LEN];
         let (
-            ctrl_1, 
+            is_initialized,
+            _key_size, 
             owner, 
-            ctrl_2, 
+            _cid_size, 
             cid, 
-            ctrl_3, 
+            _parent_size, 
             parent, 
             child, 
             diff, 
             encrypted, 
             public, 
             editable
-        ) = array_refs![src, 4, 44, 4, 59, 4, 59, 1, 1, 1, 1, 1];
+        ) = array_refs![src, 1, 4, 44, 4, 59, 4, 59, 1, 1, 1, 1, 1];
+        let is_initialized = match is_initialized {
+            [0] => false,
+            [1] => true,
+            _ => return Err(ProgramError::InvalidAccountData),
+        };
         Ok(ImgData {
+            is_initialized,
             owner: String::from_utf8(owner.to_vec()).unwrap(),
             cid: String::from_utf8(cid.to_vec()).unwrap(),
-            parent: String::from_utf8(cid.to_vec()).unwrap(),
+            parent: String::from_utf8(parent.to_vec()).unwrap(),
             child: child[0],
             diff: diff[0],
             encrypted: encrypted[0],
@@ -63,19 +75,21 @@ impl Pack for ImgData {
     fn pack_into_slice(&self, dst: &mut [u8]) {
         let dst = array_mut_ref![dst, 0, ImgData::LEN];
         let (
-            ctrl_1_dst, 
+            is_initialized_dst,
+            key_size_dst, 
             owner_dst, 
-            ctrl_2_dst, 
+            cid_size_dst, 
             cid_dst, 
-            ctrl_3_dst, 
+            parent_size_dst, 
             parent_dst, 
             child_dst, 
             diff_dst, 
             encrypted_dst, 
             public_dst, 
             editable_dst
-        ) = mut_array_refs![dst, 4, 44, 4, 59, 4, 59, 1, 1, 1, 1, 1];
-        let ImgData { 
+        ) = mut_array_refs![dst, 1, 4, 44, 4, 59, 4, 59, 1, 1, 1, 1, 1];
+        let ImgData {
+            is_initialized,
             owner, 
             cid, 
             parent, 
@@ -83,19 +97,23 @@ impl Pack for ImgData {
             diff, 
             encrypted, 
             public, 
-            editable 
+            editable
         } = self;
-        ctrl_1_dst = array_mut_ref![[44, 0, 0, 0], 0, 4];
-        owner_dst = array_mut_ref![owner.as_bytes(), 0, 44];
-        ctrl_2_dst = array_mut_ref![[59, 0, 0, 0], 0, 4];
-        cid_dst = array_mut_ref![cid.as_bytes(), 0, 59];
-        ctrl_3_dst = array_mut_ref![[59, 0, 0, 0], 0, 4];
-        parent_dst = array_mut_ref![parent.as_bytes(), 0, 59];
-        child_dst = array_mut_ref![[*child], 0, 1];
-        diff_dst = array_mut_ref![[*diff], 0, 1];
-        encrypted_dst = array_mut_ref![[*encrypted], 0, 1];
-        public_dst = array_mut_ref![[*public], 0, 1];
-        editable_dst = array_mut_ref![[*editable], 0, 1];
+        is_initialized_dst[0] = *is_initialized as u8;
+        let tmp = owner_dst.len() as u32;
+        *key_size_dst = tmp.to_le_bytes();
+        owner_dst.copy_from_slice(owner.as_ref());
+        let tmp = cid_dst.len() as u32;
+        *cid_size_dst = tmp.to_le_bytes();
+        cid_dst.copy_from_slice(cid.as_ref());
+        let tmp = parent_dst.len() as u32;
+        *parent_size_dst = tmp.to_le_bytes();
+        parent_dst.copy_from_slice(parent.as_ref());
+        *child_dst = child.to_le_bytes();
+        *diff_dst = diff.to_le_bytes();
+        *encrypted_dst = encrypted.to_le_bytes();
+        *public_dst = public.to_le_bytes();
+        *editable_dst = editable.to_le_bytes();
     }
 }
 
@@ -138,24 +156,20 @@ impl Processor {
             return Err(ProgramError::IncorrectProgramId);
         }
         //msg!("{}, {}, {}, {}, {}, {}, {}",cid,parent,child,diff,encrypted,public,editable);
-        let img_data = ImgData {
-            owner: owner.key.to_string(),
-            cid,
-            parent,
-            child,
-            diff,
-            encrypted,
-            public,
-            editable,
-        };
+        
         //msg!("{:?}", img_data);
         //let encoded_a = img_data.try_to_vec().unwrap();
-        let wiwa = (&img_data_account.data.borrow()).as_ref();
+        let mut img_data = ImgData::unpack_unchecked(&img_data_account.try_borrow_data()?)?;
+        if img_data.is_initialized() {
+            return Err(ProgramError::AccountAlreadyInitialized);
+        }
+
         //let mut img_data = ImgData::unpack(wiwa);
-        msg!("{:?}", img_data);
+        //msg!("{:?}", img_data);
         //msg!("{:?}",encoded_a);
         //let chi = Pubkey::create_with_seed(owner.key, "image", program_id)?; 
         //let mut img_data = ImgData::try_from_slice(&img_data_account.data.borrow())?;
+        img_data.is_initialized = true;
         img_data.owner = owner.key.to_string();
         img_data.cid = cid;
         img_data.parent = parent;
@@ -166,12 +180,12 @@ impl Processor {
         img_data.editable = editable;
 
         msg!("chi");
-        //msg!("{:?}",img_data);
-        img_data.serialize(&mut &mut img_data_account.data.borrow_mut()[..])?;
-        //msg!(
-        //    "Image info uploaded!\n owner {} uploaded image with cid {} ", 
-        //    img_data.owner, 
-        //    img_data.cid);
+        //msg!("{:}",img_data);
+        msg!("Image info uploaded!\n owner {} uploaded image with cid {}",
+             img_data.owner,
+             img_data.cid,);
+        ImgData::pack(img_data, &mut img_data_account.try_borrow_mut_data()?)?;
+        msg!("chi");
 
         Ok(())
     }

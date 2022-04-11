@@ -63,6 +63,7 @@ const PROGRAM_KEYPAIR_PATH = path.join(PROGRAM_PATH, 'img_test-keypair.json');
  */
 
 class ImgData {
+    is_initialized = 1;
     owner = Keypair.generate().publicKey.toString();
     cid = "00000000000000000000000000000000000000000000000000000000000";
     parent = "00000000000000000000000000000000000000000000000000000000000";
@@ -71,8 +72,9 @@ class ImgData {
     encrypted = 1;
     public = 1;
     editable = 1;
-    constructor(fields: {owner: string, cid: string, parent: string, child: number, diff: number, encrypted: number, public: number, editable: number} | undefined = undefined) {
+    constructor(fields: {is_initialized: number, owner: string, cid: string, parent: string, child: number, diff: number, encrypted: number, public: number, editable: number} | undefined = undefined) {
         if (fields) {
+            this.is_initialized = fields.is_initialized;
             this.owner = fields.owner;
             this.cid = fields.cid;
             this.parent = fields.parent;
@@ -90,6 +92,7 @@ const ImgDataSchema = new Map([
         {
             kind: 'struct',
             fields: [
+                ['is_initialized', 'u8'],
                 ['owner', 'String'], 
                 ['cid', 'String'],
                 ['parent', 'String'], 
@@ -98,6 +101,7 @@ const ImgDataSchema = new Map([
                 ['encrypted', 'u8'], 
                 ['public', 'u8'],
                 ['editable', 'u8'] 
+
             ]
         }
     ],
@@ -177,7 +181,7 @@ export async function checkProgram(): Promise<void> {
     console.log(`Using program ${programId.toBase58()}`);
 
     //const IMGDATA_SEED = 'bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzd';
-    const IMGDATA_SEED = 'image';
+    const IMGDATA_SEED = 'image11';
     imgDataPubkey = await PublicKey.createWithSeed(
         payer.publicKey, 
         IMGDATA_SEED, 
@@ -208,14 +212,7 @@ export async function checkProgram(): Promise<void> {
                 space: IMGDATA_SIZE, 
             }),
         );
-        console.log(imgDataPubkey);
-        console.log(transaction);
-        console.log(transaction.instructions);
-
         await sendAndConfirmTransaction(connection, transaction, [payer]);
-        console.log('Chi 2');
-
-        console.log(imgDataAccount);
     }
 }
 
@@ -244,7 +241,7 @@ export async function reportImgData(): Promise<void> {
         ImgData, 
         accountInfo.data
     );
-
+    console.log("\n\n", imgData, "\n\n");
     console.log(
         'Image',
         imgData.cid, 
