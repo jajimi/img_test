@@ -8,7 +8,12 @@ import {
   checkProgram,
   uploadImage,
   reportImgData,
-  chi
+  permissions,
+  downloadImage,
+  reportDownloadLog,
+  createImgDataAccount,
+  createDownloadLogAccount,
+  
 } from './prueba';
 
 async function main() {
@@ -23,13 +28,18 @@ async function main() {
   // Check if the program has been deployed
   await checkProgram();
 
+  await createDownloadLogAccount();
+
   // Say hello to an account
-  await uploadImage();
+  //await uploadImage();
+  //await permissions();
+  await downloadImage();
 
   // Find out how many times that account has been greeted
-  await reportImgData();
-  //
+  //await reportImgData();
+  await reportDownloadLog();
   //await chi();
+
 
   console.log('Success');
 }

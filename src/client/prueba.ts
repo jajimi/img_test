@@ -38,6 +38,7 @@ let programId: PublicKey;
  * The public key of the account we are saying hello to
  */
 let imgDataPubkey: PublicKey;
+let dwnldLogPubkey: PublicKey;
 
 /**
  * Path to program files
@@ -69,10 +70,22 @@ class ImgData {
     parent = "00000000000000000000000000000000000000000000000000000000000";
     child = 1;
     diff = 1;
-    encrypted = 1;
+    //encrypted = 1;
     public = 1;
     editable = 1;
-    constructor(fields: {is_initialized: number, owner: string, cid: string, parent: string, child: number, diff: number, encrypted: number, public: number, editable: number} | undefined = undefined) {
+    views = 1;
+    constructor(fields: {
+        is_initialized: number,
+        owner: string, 
+        cid: string, 
+        parent: string, 
+        child: number, 
+        diff: number, 
+        public: number, 
+        editable: number, 
+        views: number
+    } | undefined = undefined) {
+    //constructor(fields: {is_initialized: number, owner: string, cid: string, parent: string, child: number, diff: number, encrypted: number, public: number, editable: number} | undefined = undefined) {
         if (fields) {
             this.is_initialized = fields.is_initialized;
             this.owner = fields.owner;
@@ -80,9 +93,10 @@ class ImgData {
             this.parent = fields.parent;
             this.child = fields.child;
             this.diff = fields.diff;
-            this.encrypted = fields.encrypted;
+            //this.encrypted = fields.encrypted;
             this.public = fields.public;
             this.editable = fields.editable;
+            this.views = fields.views;
         }
     }
 }
@@ -98,9 +112,10 @@ const ImgDataSchema = new Map([
                 ['parent', 'String'], 
                 ['child', 'u8'], 
                 ['diff', 'u8'],
-                ['encrypted', 'u8'], 
+                //['encrypted', 'u8'], 
                 ['public', 'u8'],
-                ['editable', 'u8'] 
+                ['editable', 'u8'],
+                ['views', 'u32']
 
             ]
         }
@@ -112,9 +127,41 @@ const IMGDATA_SIZE = borsh.serialize(
     new ImgData(),
 ).length;
 
-console.log(IMGDATA_SIZE);
-console.log(borsh.serialize(ImgDataSchema, new ImgData()));
-const prueba = new ImgData();
+class DwnldLog {
+  is_initialized = 1;
+  downloader = Keypair.generate().publicKey.toString();
+  cid = "00000000000000000000000000000000000000000000000000000000000";
+  constructor (fields: {is_initialized: number, downloader: string, cid: string} | undefined = undefined) {
+    if (fields) {
+      this.is_initialized = fields.is_initialized;
+      this.downloader = fields.downloader;
+      this.cid = fields.cid;
+    } 
+  }
+}
+
+const DwnldLogSchema = new Map([
+  [
+    DwnldLog,
+    {
+      kind: 'struct',
+      fields: [
+        ['is_initialized', 'u8'],
+        ['downloader', 'String'],
+        ['cid', 'String']
+      ]
+    }
+  ],
+]);
+
+const DWNLDLOG_SIZE = borsh.serialize(
+  DwnldLogSchema,
+  new DwnldLog(),
+).length;
+
+console.log(DWNLDLOG_SIZE);
+console.log(new DwnldLog());
+console.log(borsh.serialize(DwnldLogSchema, new DwnldLog()).toString());
 
 export async function establishConnection(): Promise<void> {
     const rpcUrl = await getRpcUrl();
@@ -179,16 +226,16 @@ export async function checkProgram(): Promise<void> {
         throw new Error('Program is not executable');
     }
     console.log(`Using program ${programId.toBase58()}`);
+}
 
+export async function createImgDataAccount(): Promise<void> {
     //const IMGDATA_SEED = 'bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzd';
-    const IMGDATA_SEED = 'image11';
+    const IMGDATA_SEED = 'image13';
     imgDataPubkey = await PublicKey.createWithSeed(
         payer.publicKey, 
         IMGDATA_SEED, 
         programId,
     );
-
-    console.log(imgDataPubkey.toString());
 
     const imgDataAccount = await connection.getAccountInfo(imgDataPubkey);
     if (imgDataAccount === null) {
@@ -212,12 +259,47 @@ export async function checkProgram(): Promise<void> {
                 space: IMGDATA_SIZE, 
             }),
         );
+        await sendAndConfirmTransaction(connection, transaction, [payer]); 
+    }
+}
+
+export async function createDownloadLogAccount(): Promise<void> {
+    const DWNLDLOG_SEED = 'download7';
+    dwnldLogPubkey = await PublicKey.createWithSeed(
+        payer.publicKey,
+        DWNLDLOG_SEED,
+        programId,
+    );
+
+    const dwnldLogAccount = await connection.getAccountInfo(dwnldLogPubkey);
+    if (dwnldLogAccount === null) {
+        console.log(
+            'Creating account',
+            dwnldLogPubkey.toBase58(),
+            'to save download log',
+        );
+
+        const lamports = await connection.getMinimumBalanceForRentExemption(
+            DWNLDLOG_SIZE,
+        );
+
+        const transaction = new Transaction().add(
+            SystemProgram.createAccountWithSeed({
+                basePubkey: payer.publicKey,
+                fromPubkey: payer.publicKey,
+                lamports: lamports,
+                newAccountPubkey: dwnldLogPubkey,
+                programId: programId,
+                seed: DWNLDLOG_SEED,
+                space: DWNLDLOG_SIZE,
+            }),
+        );
         await sendAndConfirmTransaction(connection, transaction, [payer]);
     }
 }
 
 export async function uploadImage(): Promise<void> {
-    console.log('Uploading image and saving image data to', imgDataPubkey.toBase58());
+    console.log('Uploading image and saving image data into account ', imgDataPubkey.toBase58());
     const instruction = new TransactionInstruction({
         keys: [{pubkey: payer.publicKey, isSigner: true, isWritable: false}, {pubkey: imgDataPubkey, isSigner: false, isWritable: true}],
         programId : programId,
@@ -249,20 +331,48 @@ export async function reportImgData(): Promise<void> {
     );
 }
 
-export async function chi(): Promise<void> {
-    //console.log(IMGDATA_SIZE);
-    //console.log(new ImgData());
-    //let wi = borsh.serialize(ImgDataSchema, new ImgData());
-    //console.log(wi);
-    //let wo = borsh.deserialize(ImgDataSchema, ImgData, Buffer.from(wi));
-    //console.log(wo);
-    //let wa = Keypair.generate().publicKey;
-    //console.log(wa.toBase58());
-    //console.log(wa.toString());
-    //console.log(typeof wa.toBase58());
-    //console.log(typeof wa.toString());
-
-    const infocuenta = await connection.getAccountInfo(imgDataPubkey);
-    console.log(infocuenta);
+export async function reportDownloadLog(): Promise<void> {
+    const accountInfo = await connection.getAccountInfo(dwnldLogPubkey);
+    if (accountInfo === null) {
+      throw 'Error: cannot find the log account';
+    }
+    
+    const dwnldLog = borsh.deserialize(
+        DwnldLogSchema,
+        DwnldLog,
+        accountInfo.data,
+    );
+    console.log(
+        'Image',
+        dwnldLog.cid,
+        'downloaded'
+    );
 }
 
+export async function downloadImage(): Promise<void> {
+    console.log('Downloading image and saving log into account ', dwnldLogPubkey.toBase58());
+    const instruction = new TransactionInstruction({
+        keys: [{pubkey: payer.publicKey, isSigner: true, isWritable: false}, {pubkey: dwnldLogPubkey, isSigner: false, isWritable: true}],
+        programId: programId,
+        data: Buffer.from(Uint8Array.of(2, ...new TextEncoder().encode("bafykabal3rzt9zfp7udm8ju76uh74s6nl3ewap2cusf3oclp02035fbpqo"))),
+    });
+    await sendAndConfirmTransaction(
+        connection,
+        new Transaction().add(instruction),
+        [payer],
+    );
+}
+
+export async function permissions(): Promise <void> {
+  console.log('Granting permissions for the image');
+  const instruction = new TransactionInstruction({
+    keys:[{pubkey: payer.publicKey, isSigner: true, isWritable: false}, {pubkey: imgDataPubkey, isSigner: false, isWritable: true}],
+    programId: programId,
+    data: Buffer.from(Uint8Array.of(1, ...new TextEncoder().encode("bafykabal3rzt9zfp7udm8ju76uh74s6nl3ewap2cusf3oclp02035fbpqo"), 1, 1)),
+  });
+  await sendAndConfirmTransaction(
+    connection,
+    new Transaction().add(instruction),
+    [payer],
+  );
+}
